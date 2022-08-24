@@ -1,6 +1,6 @@
 package chapters.chapter02.checkpoints;
 
-public class CheckPoint2_6 {
+public class CheckPoint2_06 {
 	public static void main(String[] args) {
 		int j;
 		int k;
