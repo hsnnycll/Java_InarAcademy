@@ -13,7 +13,7 @@ public class ComputeTax {
 		int status = input.nextInt();
 		
 		//Promt the user to enter taxable income
-		System.out.println("Enter the taxable income: ");
+		System.out.print("Enter the taxable income: ");
 		double income = input.nextDouble();
 		
 		//Compute tax
