@@ -1,8 +1,8 @@
-package chapters.chapter03.listings;
+package chapters.chapter03.exercises;
 
 import java.util.Scanner;
 
-public class ComputeTax {
+public class C03E13 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -35,11 +35,26 @@ public class ComputeTax {
 			else 
 				tax = 8350 * 0.10 + (33950 - 8350) * 0.15 +(82250 - 33950) * 0.25 + 
 				(171550 - 82250) * 0.28 + (372950 - 171550) * 0.33 + (income - 372950) * 0.35;
+		}
+		if (status == 1) {
+			if (income <= 16700)
+				tax = income * 0.10;
+			else if (income <= 67900)
+				tax = 16700 * 0.10 + (income - 16700) * 0.15;
+			else if (income <= 137050)
+				tax = 16700 * 0.10 + (67900 - 16700) * 0.15 + (income - 67900) * 0.25;
+			else if (income <= 208850)
+				tax = 16700 * 0.10 + (67900 - 16700) * 0.15 + (137050 - 67900) * 0.25 +
+				(income - 208850) * 0.28;
+			else if (income <= 372950)
+				tax = 16700 * 0.10 + (67900 - 16700) * 0.15 + (137050 - 67900) * 0.25 +
+				(208850 - 137050) * 0.28 + (income - 372950) * 0.33;
+			else
+				tax = 16700 * 0.10 + (67900 - 16700) * 0.15 + (137050 - 67900) * 0.25 +
+				(208850 - 137050) * 0.28 + (372950 - 208850) * 0.33 + (income - 372950) * 0.35;
 		}	
 			
 			System.out.println("Tax is " + (int)(tax * 100) / 100.0);
 		}
 		
 	}
-
-
