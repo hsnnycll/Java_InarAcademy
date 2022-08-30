@@ -34,9 +34,6 @@ public class C03E24 {
 		}
 		
 		System.out.println("The card you picked is " + card + " of " + suitType );
-
-		
-			
 		
 	}
 
