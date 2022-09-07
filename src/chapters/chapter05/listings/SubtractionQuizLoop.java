@@ -31,7 +31,7 @@ public class SubtractionQuizLoop {
 						"your answer is wrong.\n" + number1 + " - " + number2 + " sould be " + (number1 - number2));
 
 			count++;
-			output += "\n" + number1 + "-" + number2 + "=" + answer
+			output += "\n" + number1 + "-8" + number2 + "=" + answer
 					+ ((number1 - number2 == answer) ? " correct" : " wrong");
 		}
 		long endTime = System.currentTimeMillis();
