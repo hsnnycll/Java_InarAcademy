@@ -1,10 +1,10 @@
-package chapters.chapter05.listings;
+package chapters.chapter05.exercises;
 
 import java.util.Scanner;
 
-public class SubtractionQuizLoop {
+public class C05E02 {
 	public static void main(String[] args) {
-		final int NUMBER_OF_QUESTİONS = 5;
+		final int NUMBER_OF_QUESTİONS = 10;
 		int correctCount = 0;
 		int count = 0;
 		long startTime = System.currentTimeMillis();
@@ -12,27 +12,22 @@ public class SubtractionQuizLoop {
 		Scanner input = new Scanner(System.in);
 
 		while (count < NUMBER_OF_QUESTİONS) {
-			int number1 = (int) (Math.random() * 10);
-			int number2 = (int) (Math.random() * 10);
+			int number1 = (int)((Math.random() * 16) + 1);
+			int number2 = (int)((Math.random() * 16) + 1);
 
-			if (number1 < number2) {
-				int temp = number1;
-				number1 = number2;
-				number2 = temp;
-			}
-			System.out.print("What is " + number1 + " - " + number2 + "? ");
+			System.out.print("What is " + number1 + " + " + number2 + "? ");
 			int answer = input.nextInt();
 
-			if (number1 - number2 == answer) {
+			if (number1 + number2 == answer) {
 				System.out.println("You are correct!");
 				correctCount++;
 			} else
 				System.out.println(
-						"your answer is wrong.\n" + number1 + " - " + number2 + " sould be " + (number1 - number2));
+						"your answer is wrong.\n" + number1 + " + " + number2 + " sould be " + (number1 + number2));
 
 			count++;
-			output += "\n" + number1 + "-" + number2 + "=" + answer
-					+ ((number1 - number2 == answer) ? " correct" : " wrong");
+			output += "\n" + number1 + "+" + number2 + "=" + answer
+					+ ((number1 + number2 == answer) ? " correct" : " wrong");
 		}
 		long endTime = System.currentTimeMillis();
 		long testTime = endTime - startTime;
