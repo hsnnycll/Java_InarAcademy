@@ -6,9 +6,9 @@ public class C05E05 {
 
 		int j =20;
 		for (int k = 1; k < 200; k += 2) {
-			System.out.printf("%-15d%3.1f", k, (k * 2.2));
-			System.out.print("\t|\t");
-			System.out.printf("%-9d%3.2f\n", j, (j / 2.2));
+			System.out.printf("%-15d%.1f", k, (k * 2.2));
+			System.out.printf("\t|\t");
+			System.out.printf("%-9d%.2f\n", j, (j / 2.2));
 			
 			j += 5;
 			}
