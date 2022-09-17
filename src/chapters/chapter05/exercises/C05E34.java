@@ -5,18 +5,46 @@ import java.util.Scanner;
 public class C05E34 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		System.out.print("scissor(0), rock(1), paper(2):");
 
-		
-		int userWin = 0;
-		int computerWin = 0;
-		
-		while(userWin - computerWin < 2) {
-			int computer = (int)(Math.random() * 3);
+		int computerCount = 0;
+		int userCount = 0;
+		int computer = 0;
+
+		while (computerCount < 3 && userCount < 3) {
+			computer = (int) (Math.random() * 3);
+
+			System.out.println("scissor (0), rock (1), paper(2) : ");
 			int user = input.nextInt();
+
+			if (computer == 0 && user == 1) {
+				System.out.println("The computer is scscissor. You are rock. You won");
+				userCount++;
+			} else if (computer == 1 && user == 2) {
+				System.out.println("The computer is rock. You are paper. You won");
+				userCount++;
+			} else if (computer == 2 && user == 0) {
+				System.out.println("The computer is paper. You are scscissor. You won");
+				userCount++;
+			} else if (computer == 0 && user == 2) {
+				System.out.println("The computer is scissors. You are paper. You lose");
+				computerCount++;
+			} else if (computer == 1 && user == 0) {
+				System.out.println("The computer is rock. You are scscissor. You lose");
+				computerCount++;
+			} else if (computer == 2 && user == 1) {
+				System.out.println("The computer is paper. You are rock. You lose");
+				computerCount++;
+			} else if (computer == user) {
+				System.out.print("The compuer is ");
+				if (computer == 0)
+					System.out.println("scissor. You are scissor too. It is a draw.");
+				else if (computer == 1)
+					System.out.println("rock. You are rock too. It is a draw.");
+				else if (computer == 2)
+					System.out.println("paper. You are paper too. It is a draw.");
+			}
 		}
-		System.out.println();
+		System.out.println("Computer is " + computerCount + "\n" + "Player is " + userCount);
 	}
 
 }
