@@ -7,17 +7,17 @@ public class C05E17 {
 		Scanner input = new Scanner(System.in);
 
 		System.out.print("Enter the number of lines: ");
-		int l = input.nextInt();
-		for (int i = 1; i <= l; i++) {
-			int n = l - i;
-			for (int s = 0; s < n; s++) {
+		int line = input.nextInt();
+		for (int i = 1; i <= line; i++) {
+			int n = line - i;
+			for (int space = 0; space < n; space++) {
 				System.out.print("  ");
 			}
-			for (int b = i; b > 1; b--) {
-				System.out.print(b + " ");
+			for (int leftSideNumbers = i; leftSideNumbers > 1; leftSideNumbers--) {
+				System.out.print(leftSideNumbers + " ");
 			}
-			for (int a = 1; a <= i; a++) {
-				System.out.print(a + " ");
+			for (int rightSideNumbers = 1; rightSideNumbers <= i; rightSideNumbers++) {
+				System.out.print(rightSideNumbers + " ");
 			}
 			System.out.println();
 		}

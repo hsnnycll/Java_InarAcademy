@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class C05E02 {
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
 		final int NUMBER_OF_QUESTİONS = 10;
 		int correctCount = 0;
 		int count = 0;
 		long startTime = System.currentTimeMillis();
 		String output = " ";
-		Scanner input = new Scanner(System.in);
 
 		while (count < NUMBER_OF_QUESTİONS) {
 			int number1 = (int)((Math.random() * 16) + 1);

@@ -22,5 +22,4 @@ public class C05E21 {
 			System.out.printf("\t\t\t%.2f", totalPayment);
 		}
 	}
-
 }

@@ -4,7 +4,7 @@ public class C05E19 {
 	public static void main(String[] args) {
 		int a = 1;
 		int b = 2;
-		System.out.printf("%36d\n",a);
+		System.out.printf("%36d\n", a);
 		for (int i = 1; i <= 7; i++) {
 			for (int j = 8; j > i; j--) {
 				System.out.print("    ");
@@ -19,7 +19,5 @@ public class C05E19 {
 			a *= 2;
 			b *= 2;
 		}
-
 	}
-
 }

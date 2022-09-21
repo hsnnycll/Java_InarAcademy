@@ -11,17 +11,19 @@ public class C05E01 {
 		int negatives = 0;
 		int positives = 0;
 		double sum = 0;
-		double average;
-		int number;
-		do {
+		double average = 0;
+		int number = 1;
+		while (number != 0) {
 			number = input.nextInt();
 			if (number < 0)
 				negatives++;
 			else if (number > 0)
 				positives++;
+			else
+			break;
 			sum += number;
 			average = sum / (positives + negatives);
-		}while (number != 0);
+		}
 		System.out.println("The number of positives is " + positives);
 		System.out.println("The number of negatives is " + negatives);
 		System.out.println("The total is " + sum);
