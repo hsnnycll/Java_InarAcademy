@@ -10,15 +10,15 @@ public class C05E32 {
 		int guess = input.nextInt();
 		int guessDigit1 = guess / 10;
 		int guessDigit2 = guess % 10;
-		int lottery;
-		int lotteryDigit1;
-		int lotteryDigit2;
+		int lottery = 0;
+		int lotteryDigit1 = 0;
+		int lotteryDigit2 = 0;
 
-		do {
+		while (lotteryDigit1 == lotteryDigit2){
 			lottery = (int) (Math.random() * 100);
 			lotteryDigit1 = lottery / 10;
 			lotteryDigit2 = lottery % 10;
-		} while (lotteryDigit1 == lotteryDigit2);
+		}
 
 		System.out.println("The lottery number is " + lottery);
 

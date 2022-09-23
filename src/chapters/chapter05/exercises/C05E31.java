@@ -16,7 +16,7 @@ public class C05E31 {
 		
 		System.out.println("Month    CD Value");
 		for (int a = 1; a <= month; a++) {
-			amount *= annualYield / 1200 + 1.0D;
+			amount *= annualYield / 1200 + 1.0;
 			System.out.printf("%2d%15.2f\n", a, amount);
 		}
 	}

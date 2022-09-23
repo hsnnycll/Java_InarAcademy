@@ -8,11 +8,10 @@ public class C05E37 {
 		
 		System.out.println("Enter the number : ");
 		int number = input.nextInt();
-		
+
 		String binary ="";
-		
 		while(number != 0) {
-			binary = (number %2) + binary;
+			binary = (number % 2) + binary;
 			number /= 2;
 		}
 		System.out.println(binary);
