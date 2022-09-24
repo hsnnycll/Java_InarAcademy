@@ -14,6 +14,6 @@ public class C05E39 {
             sales += 0.01;
         }
 
-        System.out.printf("\n\nYou'll need to make $%1.2f in sales.", sales);
+        System.out.printf("You'll need to make $%1.2f in sales.", sales);
     }
 }
