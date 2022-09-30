@@ -7,7 +7,7 @@ public class C06E32 {
 
     public static int craps(int playtimes){
         int count = 0;
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < playtimes; i++) {
             int d1 = (int) (Math.random() * 6 + 1);
             int d2 = (int) (Math.random() * 6 + 1);
             int sumd = d1 + d2;

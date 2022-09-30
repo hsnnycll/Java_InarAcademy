@@ -1,6 +1,6 @@
 package chapters.chapter06.exercises;
 
-public class C06E24 {
+public class C06E33 {
     public static void main(String[] args) {
         showCurretnTime();
         showCurrentDate();
