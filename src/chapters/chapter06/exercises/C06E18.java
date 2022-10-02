@@ -7,7 +7,7 @@ public class C06E18 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("■ A password must have at least eight characters.\n" +
-                "■ A password consists of only letters and digits.\n" + 
+                "■ A password consists of only letters and digits.\n" +
                 "■ A password must contain at least two digits.");
         System.out.print("Enter your password: ");
         String password = input.nextLine();
