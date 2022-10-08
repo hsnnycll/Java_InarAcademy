@@ -8,11 +8,10 @@ public class C07E05 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter ten numbers: ");
-        int[] numbers = new int[10];
         int[] distinctNumbers = new int[10];
 
         int count = 0;
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < distinctNumbers.length; i++) {
             int num = input.nextInt();
             if (isDistinct(distinctNumbers, num)) {
                 distinctNumbers[count] = num;
