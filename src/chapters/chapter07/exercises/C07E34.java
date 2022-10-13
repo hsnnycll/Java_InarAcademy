@@ -1,0 +1,40 @@
+package chapters.chapter07.exercises;
+
+import java.util.Scanner;
+
+public class C07E34 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a string: ");
+        String s1 = input.nextLine();
+        s1 = sort(s1);
+        System.out.println(s1);
+    }
+
+    public static String sort(String s) {
+        char[] charArray = new char[s.length()];
+        for (int i = 0; i < charArray.length; i++) {
+            charArray[i] = s.charAt(i);
+        }
+        charArray = sort(charArray);
+        String result = "";
+        for (int i = 0; i < charArray.length; i++) {
+            result += charArray[i];
+        }
+        return result;
+    }
+
+    public static char[] sort(char[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    char temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
+    }
+}
