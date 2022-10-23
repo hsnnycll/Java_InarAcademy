@@ -33,12 +33,13 @@ public class C07E30 {
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] == array[i + 1]) {
                 count++;
+                if (count == 4) {
+            return true;
+        }
             } else
                 count = 1;
         }
-        if (count == 4) {
-            return true;
-        }
+        
         return false;
     }
 }

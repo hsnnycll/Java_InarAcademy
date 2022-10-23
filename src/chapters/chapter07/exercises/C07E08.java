@@ -8,7 +8,7 @@ public class C07E08 {
 
         System.out.println("Enter ten numbers: ");
 
-        double[] numbers = new double[0];
+        double[] numbers = new double[10];
         for (int i = 0; i < 10; i++) {
             numbers[i] = input.nextInt();
         }

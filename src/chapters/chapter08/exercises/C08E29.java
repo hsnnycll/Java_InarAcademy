@@ -2,7 +2,7 @@ package chapters.chapter08.exercises;
 
 import java.util.Scanner;
 
-public class C08E28 {
+public class C08E29 {
     public static void main(String[] args) {
 
         int[][] array = new int[3][3];
@@ -11,11 +11,7 @@ public class C08E28 {
         int[][] array2 = new int[3][3];
         getArray(array2);
 
-        printArray(array);
-        printArray(array2);
-
-        System.out.println("The two arrays are " + ((equals(array, array2)) ? " strictly identical." : " not strictly identical."));
-
+        System.out.println("The two arrays are" + ((equals(array, array2)) ? " identical." : " not identical."));
     }
 
     public static void getArray(int[][] array) {
@@ -38,14 +34,35 @@ public class C08E28 {
         System.out.println();
     }
 
-    public static boolean equals(int[][] array, int[][] array2) {
-        for (int row = 0; row < array.length; row++) {
-            for (int col = 0; col < array[row].length; col++) {
-                if (array[row][col] != array2[row][col]) {
+    public static boolean equals(int[][] m1, int[][] m2) {
+        sortArray(m1);
+        sortArray(m2);
+
+        printArray(m1);
+        printArray(m2);
+        for (int row = 0; row < m1.length; row++) {
+            for (int col = 0; col < m1[row].length; col++) {
+                if (m1[row][col] != m2[row][col]) {
                     return false;
                 }
             }
         }
         return true;
+    }
+
+    public static void sortArray(int[][] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                for (int k = 0; k < matrix.length; k++) {
+                    for (int l = 0; l < matrix.length; l++) {
+                        if(matrix[i][j] < matrix[k][l]){
+                            int temp = matrix[i][j];
+                            matrix[i][j] = matrix[k][l];
+                            matrix[k][l] = temp;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
