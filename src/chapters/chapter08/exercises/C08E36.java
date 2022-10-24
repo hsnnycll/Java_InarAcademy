@@ -7,7 +7,7 @@ public class C08E36 {
 
         char[][] array = createArray();
         getInput(array);
-        System.out.println("Array is " + (isLatinSquare(array) ? " a latin square" : " not a latin square"));
+        System.out.println("Array is" + (isLatinSquare(array) ? " a latin square" : " not a latin square"));
     }
 
     public static char[][] createArray() {
