@@ -35,11 +35,11 @@ public class C08E35 {
     public static int[] findLargestBlock(int[][] matrix) {
         int[] result = new int[3];
         int max = 2;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                while (isSquareMatrix(matrix, i, j, max)) {
-                    result[0] = i;
-                    result[1] = j;
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                while (isSquareMatrix(matrix, row, col, max)) {
+                    result[0] = row;
+                    result[1] = col;
                     result[2] = max;
                     max++;
                 }
@@ -48,15 +48,15 @@ public class C08E35 {
         return result;
     }
 
-    public static boolean isSquareMatrix(int[][] matrix, int row, int column, int count) {
-        if (column + count > matrix.length) {
+    public static boolean isSquareMatrix(int[][] matrix, int row, int col, int max) {
+        if (col + max > matrix.length) {
             return false;
         }
-        if (row + count > matrix.length) {
+        if (row + max > matrix.length) {
             return false;
         }
-        for (int i = row; i < row + count; i++) {
-            for (int j = column; j < column + count; j++) {
+        for (int i = row; i < row + max; i++) {
+            for (int j = col; j < col + max; j++) {
                 if (matrix[i][j] != 1) {
                     return false;
                 }
