@@ -88,7 +88,7 @@ public class FootballClub {
         if (doPlayerExistInMyTeam(p)) {
             this.balance = this.balance + p.getFee();
             removePlayer(p);
-            System.out.println("You sold" + p.getName().toUpperCase());
+            System.out.println("You sold " + p.getName().toUpperCase());
             printBalance();
         } else {
             System.out.println(p.getName() + " does not exist in this team.");
