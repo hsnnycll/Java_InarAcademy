@@ -8,7 +8,7 @@ public class C05E42 {
 
         System.out.println("Enter your commission sought : ");
 
-        double commissionSought = input.nextInt();
+        double commissionSought = input.nextDouble();
         double baseSalary = 5000;
 
         double firstComRate = baseSalary * 0.08;

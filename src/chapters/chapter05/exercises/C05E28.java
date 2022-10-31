@@ -22,10 +22,11 @@ public class C05E28 {
 				if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
 					monthName = "February";
 					monthDays += 29;
-				}else
+				}else {
 					monthName = "February";
 					monthDays += 28;
-				break;
+					break;
+				}
 			case 3:
 				monthName = "March";
 				monthDays += 31;
