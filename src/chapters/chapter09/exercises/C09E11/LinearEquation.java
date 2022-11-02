@@ -60,4 +60,12 @@ public class LinearEquation {
     public double getY(){
         return (a * f - e * c) / (a * d - b * c);
     }
+
+    public String toString(){
+        if(isSolvable()){
+           return "x = " + getX() + "\ny = " + getY();
+        }else {
+            return "The equation has no solution.";
+        }
+    }
 }
