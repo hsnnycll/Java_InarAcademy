@@ -26,5 +26,5 @@ public class Course {
     public int getNumberOfStudents() {
         return numberOfStudents;
     }
-    
+
 }
