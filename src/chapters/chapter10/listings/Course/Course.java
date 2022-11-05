@@ -1,4 +1,4 @@
-package chapters.chapter10.listings.Course;
+package chapters.chapter10.listings.course;
 
 public class Course {
 
