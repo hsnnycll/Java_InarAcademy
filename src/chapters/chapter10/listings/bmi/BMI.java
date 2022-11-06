@@ -1,4 +1,4 @@
-package chapters.chapter10.listings.BMI;
+package chapters.chapter10.listings.bmi;
 
 public class BMI {
 

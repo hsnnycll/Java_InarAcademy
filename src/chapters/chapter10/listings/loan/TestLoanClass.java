@@ -1,4 +1,4 @@
-package chapters.chapter10.listings.Loan;
+package chapters.chapter10.listings.loan;
 
 import java.util.Scanner;
 

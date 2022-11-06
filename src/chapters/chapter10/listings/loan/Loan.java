@@ -1,4 +1,4 @@
-package chapters.chapter10.listings.Loan;
+package chapters.chapter10.listings.loan;
 
 public class Loan {
 
