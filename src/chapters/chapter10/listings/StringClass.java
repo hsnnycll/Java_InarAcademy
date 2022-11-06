@@ -3,7 +3,6 @@ package chapters.chapter10.listings;
 public class StringClass {
     public static void main(String[] args) {
 
-
         Integer n1 = 128;
         Integer n2 = 128;
         System.out.println(n1 == n2);
@@ -46,7 +45,26 @@ public class StringClass {
         System.out.println("----------------------");
 
         String[] array = "Java,C?C#,C++".split("[.,:;?]");
-        for (int i = 0; i < array.length; i++)
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
+        }
+        System.out.println("----------------------");
+
+        char[] chars = "Java".toCharArray();
+        System.out.println(chars);
+        System.out.println("----------------------");
+
+        char[] dst = {'J', 'A', 'V', 'A', '1', '3', '0', '1', '2'};
+        "CSHello".getChars(2, 7, dst, 4);
+        System.out.println(dst);
+        System.out.println("----------------------");
+
+        String str = new String(new char[]{'J', 'a', 'v', 'a'});
+        System.out.println(str);
+        String str1 = String.valueOf(new char[]{'J', 'a', 'v', 'a'});
+        System.out.println(str1);
+        String str2 = String.format("%7.2f|%6d|%-4s", 45.556, 14, "AB");
+        System.out.println(str2);
+        System.out.println("----------------------");
     }
 }
