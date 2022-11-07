@@ -9,7 +9,7 @@ public class BMI {
     public static final double METERS_PER_INCH = 0.0254;
 
     public BMI(String name, int age, double weight, double feet, double inches){
-        this(name, age, weight, feet * 3 + inches);
+        this(name, age, weight, feet / 3.28 + inches / 39.37);
     }
     public BMI(String name, int age, double weight, double height) {
         this.name = name;
