@@ -2,7 +2,7 @@ package chapters.chapter10.exercises.C10E05;
 
 import java.util.Scanner;
 
-public class C10E05 {
+public class PrimeFactors {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -17,11 +17,8 @@ public class C10E05 {
             }
         }
 
-        StackOfIntegers reversedStack = new StackOfIntegers();
         while(!stack.empty()){
-            System.out.print(stack.peek() + ", ");
-            reversedStack.push(stack.pop());
+            System.out.print(stack.pop() + ", ");
         }
     }
-
 }
