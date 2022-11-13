@@ -1,8 +1,4 @@
-package chapters.chapter11.listings;
-
-import chapters.chapter11.listings.geometricObject.CircleFromSimpleGeometricObject;
-import chapters.chapter11.listings.geometricObject.RectangleFromSimpleGeometricObject;
-import chapters.chapter11.listings.geometricObject.SimpleGeometricObject;
+package chapters.chapter11.listings.geometricObject;
 
 public class PolymorphismDemo {
     public static void main(String[] args) {
