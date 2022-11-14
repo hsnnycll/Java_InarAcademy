@@ -1,8 +1,8 @@
-package chapters.chapter06.exercises;
+package chapters.chapter11.exercises;
 
 import chapters.chapter06.listings.PrintCalendar;
 
-public class C06E24 {
+public class Test {
     public static void main(String[] args) {
         showCurretnTime();
         showCurrentDate();
@@ -35,19 +35,18 @@ public class C06E24 {
         displayDate(totalDays);
 
     }
-
-    public static void displayDate(long totalDays) {
+    public static void displayDate(long totalDays){
         final int YEAR = 1970;
         int cDay = 1;
         int cMonth = 1;
         int cYear = YEAR;
-        for (int day = 1; day <= totalDays; day++) {
-            if (cDay < PrintCalendar.getNumberOfDaysInMonth(cYear, cMonth)) {
+        for (int day = 1; day <= totalDays; day++){
+            if (cDay < PrintCalendar.getNumberOfDaysInMonth(cYear, cMonth)){
                 cDay++;
             } else if (cMonth < 12) {
                 cMonth++;
                 cDay = 1;
-            } else {
+            }else {
                 cYear++;
                 cMonth = 1;
                 cDay = 1;
