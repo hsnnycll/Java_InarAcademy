@@ -25,20 +25,21 @@ public class C06E18 {
             return true;
     }
 
-    public static boolean isOnlyLettersAndDigits(String password){
+    public static boolean isOnlyLettersAndDigits(String password) {
         boolean isOnly = false;
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
-            if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z') || ('0' <= ch && ch <= '9'))
+            if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z') || ('0' <= ch && ch <= '9')) {
                 isOnly = true;
-            else 
+            } else {
                 isOnly = false;
-            break;
+                break;
+            }
         }
         return isOnly;
     }
 
-    public static boolean isAtLeastTwoDigits(String password){
+    public static boolean isAtLeastTwoDigits(String password) {
         int count = 0;
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
