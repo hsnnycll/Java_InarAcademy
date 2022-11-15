@@ -7,11 +7,12 @@ public class C07E13 {
     }
 
     public static int getRandom(int... numbers) {
-        int number = 0;
+        int number = (int)(Math.random() * 54 + 1);
         for (int i = 0; i < numbers.length; i++) {
-            number = (int) (Math.random() * 54 + 1);
-            if (number != numbers[i])
-                break;
+            if (number == numbers[i]) {
+                number = (int) (Math.random() * 54 + 1);
+                i = 0;
+            }
         }
         return number;
     }
