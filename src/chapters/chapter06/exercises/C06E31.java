@@ -81,10 +81,11 @@ public class C06E31 {
     }
 
     public static long getPrefix(long number, int k){
-        if(k >= getSize(number)){
+        int size = getSize(number);
+        if(k >= size){
             return number;
         }else {
-            long kDigit = (long) (number / Math.pow(10, getSize(number) - k));
+            long kDigit = (long) (number / Math.pow(10, size - k));
             return kDigit;
         }
     }
