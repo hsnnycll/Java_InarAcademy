@@ -5,7 +5,7 @@ import java.util.Date;
 import chapters.chapter10.listings.loan.Loan;
 import chapters.chapter11.listings.geometricObject.CircleFromSimpleGeometricObject;
 
-public class ArrayList1 {
+public class UseArrayList {
     public static void main(String[] args) {
 
         ArrayList<Object> list = new ArrayList<>();
