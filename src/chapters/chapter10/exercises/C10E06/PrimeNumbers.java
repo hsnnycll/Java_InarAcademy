@@ -3,7 +3,7 @@ package chapters.chapter10.exercises.C10E06;
 public class PrimeNumbers {
     public static void main(String[] args) {
 
-        int number = 12000;
+        int number = 120;
         StackOfIntegers stack = new StackOfIntegers();
 
         for (int i = 2; i <= number; i++) {
