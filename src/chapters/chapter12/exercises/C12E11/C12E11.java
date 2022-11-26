@@ -19,16 +19,17 @@ public class C12E11 {
             System.exit(1);
         }
 
-        String remove = args[0];
+        StringBuilder str2 = new StringBuilder();
         try (
-                Scanner input = new Scanner(file);
-                PrintWriter output = new PrintWriter(file);
+                Scanner input = new Scanner(file)
         ) {
             while (input.hasNext()) {
                 String str = input.nextLine();
-                str.replaceAll(remove, "");
-                output.println(str);
+                str2.append(str.replaceAll(args[0], " ") + "\n");
             }
+            PrintWriter output = new PrintWriter(file);
+            output.println(str2);
+            output.close();
         }
     }
 }

@@ -19,15 +19,17 @@ public class C12E12 {
             System.exit(1);
         }
 
+        StringBuilder str2 = new StringBuilder();
         try (
-                Scanner input = new Scanner(file);
-                PrintWriter output = new PrintWriter(file);
+                Scanner input = new Scanner(file)
         ) {
             while (input.hasNext()) {
                 String str = input.nextLine();
-                str.replaceAll("\n\\{", "{");
-                output.println(str);
+                str2.append(str.replaceAll("\n\\{", "{") + "\n");
             }
+            PrintWriter output = new PrintWriter(file);
+            output.println(str2);
+            output.close();
         }
     }
 }
