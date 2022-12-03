@@ -1,4 +1,4 @@
-package weeks.week_15.calculator;
+package weeks.week_15;
 
 public class TestCalculator {
     public static void main(String[] args) {
