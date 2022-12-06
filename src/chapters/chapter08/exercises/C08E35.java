@@ -32,7 +32,7 @@ public class C08E35 {
         return matrix;
     }
 
-   /* public static int[] findLargestBlock(int[][] matrix) {
+    public static int[] findLargestBlock(int[][] matrix) {
         int[] result = new int[3];
         int max = 2;
         for (int row = 0; row < matrix.length; row++) {
@@ -63,9 +63,9 @@ public class C08E35 {
             }
         }
         return true;
-    }*/
+    }
 
-    public static int[] findLargestBlock(int[][] m){
+    /*public static int[] findLargestBlock(int[][] m){
         int[] result = new int[3];
         for (int k = 1; k < m.length - 1; k++) {
             for (int i = 0; i < k; i++) {
@@ -93,5 +93,5 @@ public class C08E35 {
             }
         }
         return null;
-    }
+    }*/
 }
