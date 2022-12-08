@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class C20E01 {
@@ -20,7 +21,7 @@ public class C20E01 {
             System.exit(1);
         }
 
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         try (
                 Scanner input = new Scanner(file)
         ) {

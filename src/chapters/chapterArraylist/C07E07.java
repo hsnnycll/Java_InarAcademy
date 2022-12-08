@@ -1,10 +1,11 @@
 package chapters.chapterArraylist;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class C07E07 {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             list.add((int) (Math.random() * 10));
         }

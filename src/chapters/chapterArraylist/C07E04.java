@@ -1,13 +1,14 @@
 package chapters.chapterArraylist;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class C07E04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        ArrayList<Double> list = new ArrayList<>();
+        List<Double> list = new ArrayList<>();
         System.out.println("Enter the scores: ");
         int count = 0;
         double i;
