@@ -54,19 +54,30 @@ public class MyString1 {
         return true;
     }
 
-    public static MyString1 valeurOf(int i) {
-        int count = 0;
-        int number = 1;
+    public static MyString1 valueOf(int i) {
 
-        while (number > 0) {
-            number /= 10;
+        char[] result = new char[numberOfDigit(i)];
+        if (i == 0){
+            result[0] ='0';
+        }
+        int index = result.length -1;
+        while (i != 0){
+            result[index] = (char) (i % 10 + '0');
+            i /= 10;
+            index--;
+        }
+        return new MyString1(result);
+    }
+
+    public static int numberOfDigit(int n){
+        int count = 0;
+        if (n == 0){
+            return 1;
+        }
+        while (n != 0) {
+            n /= 10;
             count++;
         }
-        char[] ch = new char[count];
-        for (int j = count; j >= 0; j--) {
-            ch[j] = (char) ('0' + i % 10);
-            i /= 10;
-        }
-        return new MyString1(ch);
+        return count;
     }
 }

@@ -16,7 +16,7 @@ public class MyStringBuilder2 {
     }
 
     public MyStringBuilder2 insert(int offset, MyStringBuilder2 s) {
-        char[] temp = new char[s.toString().length() + chars.length];
+        char[] temp = new char[s.chars.length + chars.length];
         for (int i = 0; i < offset; i++) {
             temp[i] = chars[i];
         }
