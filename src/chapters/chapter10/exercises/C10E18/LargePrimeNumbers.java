@@ -4,20 +4,31 @@ import java.math.BigInteger;
 
 public class LargePrimeNumbers {
     public static void main(String[] args) {
-        BigInteger number = new BigInteger(Long.MAX_VALUE + "").add(BigInteger.ONE);
-        BigInteger divisor = new BigInteger(String.valueOf(BigInteger.TWO));
 
+        BigInteger ZERO = new BigInteger("0");
+        BigInteger bigPrime = new BigInteger(String.valueOf(Long.MAX_VALUE));
+
+        boolean isPrime = true;
         int count = 0;
-        while (count < 5) {
-            while ((divisor.compareTo(number.divide(BigInteger.TWO)) <= 0)) {
-                if (!(number.remainder(divisor).equals(BigInteger.ZERO))) {
-                    System.out.println(number);
-                    number = number.add(BigInteger.ONE);
-                    divisor = BigInteger.TWO;
-                    count++;
+
+        long sqrt = (long) (Math.sqrt(Long.MAX_VALUE));
+
+        while (count < 5){
+            BigInteger divisor = new BigInteger("2");
+            bigPrime = bigPrime.add(BigInteger.ONE);
+
+            for (long i = 2; i <= sqrt + 1; i++) {
+                if (bigPrime.remainder(divisor).equals(ZERO)){
+                    isPrime = false;
+                    break;
                 }
-                divisor.add(BigInteger.ONE);
+                divisor = divisor.add(BigInteger.ONE);
             }
+            if (isPrime) {
+                System.out.println(bigPrime);
+                count++;
+            }
+            sqrt++;
         }
     }
 }

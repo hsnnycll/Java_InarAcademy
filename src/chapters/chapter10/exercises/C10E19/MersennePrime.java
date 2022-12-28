@@ -30,11 +30,11 @@ public class MersennePrime {
     public static boolean isPrime(BigInteger num){
         BigInteger divisor = BigInteger.TWO;
         while ((divisor.compareTo(num.divide(BigInteger.TWO)) <= 0)) {
-            if (!(num.remainder(divisor).equals(BigInteger.ZERO))) {
-               return true;
+            if ((num.remainder(divisor).equals(BigInteger.ZERO))) {
+               return false;
             }
             divisor.add(BigInteger.ONE);
         }
-        return false;
+        return true;
     }
 }
