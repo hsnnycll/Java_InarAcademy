@@ -70,17 +70,22 @@ public class MyRectangle2D {
     }
 
     public boolean contains(MyRectangle2D r){
-        double distanceOfX = r.getX() > this.x ? r.getX() - this.x : this.x - r.getX();
-        double distanceOfY = r.getY() > this.y ? r.getY() - this.y : this.y - r.getY();
+        double maxX1 = this.x + this.width / 2;
+        double minX1 = this.x - this.width / 2;
+        double maxX2 = r.getX() + r.getWidth() / 2;
+        double minX2 = r.getX() - r.getWidth() / 2;
+        double maxY1 = this.y + this.height / 2;
+        double minY1 = this.y - this.height / 2;
+        double maxY2 = r.getY() + r.getHeight() / 2;
+        double minY2 = r.getY() - r.getHeight() / 2;
 
-        return  (distanceOfX <= (Math.pow(this.width - r.getWidth(), 2) / 2 * (this.width - r.getWidth()))
-                && distanceOfY <= (Math.pow(this.y - r.getY(), 2) / 2 * (this.y - r.getY())));
+        return (minX1 <= minX2 && minY1 <= minY2 && maxX1 >= maxX2 && maxY1 >= maxY2);
     }
 
     public boolean overlaps(MyRectangle2D r){
         double distanceOfX = r.getX() > this.x ? r.getX() - this.x : this.x - r.getX();
         double distanceOfY = r.getY() > this.y ? r.getY() - this.y : this.y - r.getY();
 
-        return  ((distanceOfX <= (this.width + r.getWidth()) / 2) || (distanceOfY <= (this.y + r.getY()) / 2));
+        return  (!this.contains(r) && (distanceOfX <= (this.width + r.getWidth()) / 2) || (distanceOfY <= (this.y + r.getY()) / 2));
     }
 }

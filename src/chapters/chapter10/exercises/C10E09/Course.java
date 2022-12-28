@@ -34,15 +34,20 @@ public class Course {
     }
 
     public void dropStudent(String student) {
-        int indexOfStudent = findStudent(student);
-        if (indexOfStudent == -1) {
-            System.out.println("There is no student by this name.");
-            return;
+        for (int i = 0; i < numberOfStudents; i++) {
+            if (students[i].equalsIgnoreCase(student)){
+                if (i == students.length - 1) {
+                    students[i] = null;
+                    numberOfStudents--;
+                }else {
+                    for (int j = i + 1; j < numberOfStudents; j++) {
+                        students[j - 1] = students[j];
+                    }
+                    students[numberOfStudents] = null;
+                    numberOfStudents--;
+                }
+            }
         }
-        for (int startIndex = indexOfStudent; startIndex < numberOfStudents - 1; startIndex++) {
-            students[startIndex] = students[startIndex + 1];
-        }
-        numberOfStudents--;
     }
 
     public int findStudent(String student) {
